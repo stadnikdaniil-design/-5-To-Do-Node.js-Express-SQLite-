@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій список завдань</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <p class="eyebrow">ПЛАНУЙ · ВИКОНУЙ · ДОСЯГАЙ</p>
+            <h1>Мій список завдань</h1>
+            <p class="subtitle">Усі важливі справи — в одному місці.</p>
+        </header>
+
+        <form id="taskForm" class="task-form">
+            <label class="visually-hidden" for="taskInput">Нове завдання</label>
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Наприклад: виконати лабораторну роботу"
+                maxlength="200"
+                autocomplete="off"
+                required
+            >
+            <button type="submit">Додати</button>
+        </form>
+
+        <div class="list-heading">
+            <h2>Мої завдання</h2>
+            <span id="taskCounter" class="counter">0 завдань</span>
+        </div>
+
+        <p id="statusMessage" class="status-message" role="status"></p>
+        <ul id="taskList" class="task-list"></ul>
+
+        <p class="footer-note">Завдання зберігаються в базі даних SQLite.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
